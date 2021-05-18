@@ -188,6 +188,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.force_ltd_sys_ind=1 \
     persist.vendor.radio.voice_on_lte=1 \
     persist.vendor.radio.calls.on.ims=1 \
+    persist.vendor.radio.jbims=1
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
