@@ -384,7 +384,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Smoothens UI
 PRODUCT_PROPERTY_OVERRIDES += \
    persist.service.lgospd.enable=0 \
-   persist.service.pcsync.enable=0
+   persist.service.pcsync.enable=0 \
+    ro.config.avoid_gfx_accel=true \
+    ro.vendor.qti.am.reschedule_service=true \
+    debug.egl.force_msaa=1 \
 
 # Blurs
 PRODUCT_PROPERTY_OVERRIDES += \
