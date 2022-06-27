@@ -332,6 +332,10 @@ PRODUCT_COPY_FILES += \
 # Properties
 -include $(LOCAL_PATH)/device_props.mk
 
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
+RELAX_USES_LIBRARY_CHECK := true
+SKIP_ABI_CHECKS := true
+
 # Protobuf
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v28/arm64/arch-arm-armv8-a/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-lite-v28.so \
