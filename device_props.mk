@@ -232,7 +232,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.no_wait_for_card=1 \
     persist.vendor.radio.oem_ind_to_both=0 \
     persist.vendor.radio.relay_oprt_change=1 \
-    rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
     ro.mot.ignore_csim_appid=true \
     persist.sys.ssr.restart_level=ALL_ENABLE \
     persist.sys.qc.sub.rdump.on=1 \
@@ -293,6 +292,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.cne.logging.qxdm=3974 \
     persist.vendor.ims.disableDebugLogs=1 \
     persist.vendor.ims.disableQXDMLogs=1 \
+    vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
     DEVICE_PROVISIONED=1
 
 # RmNet Data
