@@ -57,6 +57,18 @@ function blob_fixup() {
     vendor/lib64/libsettings.so)
         patchelf --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-v28.so" "${2}"
     ;;
+
+    system_ext/lib64/lib-imscamera.so | system_ext/lib64/lib-imsvideocodec.so)
+        for LIBGUI_SHIM in $(grep -L "libgui_shim.so" "${2}"); do
+            "${PATCHELF}" --add-needed "libgui_shim.so" "${LIBGUI_SHIM}"
+        done
+    ;;
+
+    vendor/lib/libmot_gpu_mapper.so)
+        for LIBGUI_SHIM in $(grep -L "libgui_shim_vendor.so" "${2}"); do
+            "${PATCHELF}" --add-needed "libgui_shim_vendor.so" "${LIBGUI_SHIM}"
+        done
+    ;;
     esac
 }
 
