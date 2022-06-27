@@ -272,6 +272,7 @@ TARGET_LD_SHIM_LIBS := \
 TARGET_USES_MKE2FS := true
 
 # Wifi
+TARGET_HAS_BROKEN_WLAN_SET_INTERFACE := true
 BOARD_HAS_QCOM_WLAN              := true
 PRODUCT_VENDOR_MOVE_ENABLED      := true
 BOARD_WLAN_DEVICE                := qcwcn
