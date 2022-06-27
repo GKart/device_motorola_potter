@@ -110,7 +110,8 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    libbt-vendor
+    libbt-vendor \
+    android.hardware.bluetooth@1.0.vendor
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -189,7 +190,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1
+    android.hardware.biometrics.fingerprint@2.1.vendor
 
 # FM
 PRODUCT_PACKAGES += \
@@ -197,10 +198,10 @@ PRODUCT_PACKAGES += \
     libfmjni \
     init.qti.fm.sh
 
-# Gatekeeper HAL
+# Gatekeeper
 PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service
+    android.hardware.gatekeeper@1.0 \
+    android.hardware.gatekeeper@1.0.vendor
 
 # GPS / Location
 PRODUCT_PACKAGES += \
@@ -297,6 +298,7 @@ PRODUCT_COPY_FILES += \
 # Netutils
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.0 \
+    android.system.net.netd@1.0.vendor \
     netutils-wrapper-1.0 \
     libandroid_net \
     libandroid_net_32
@@ -367,9 +369,14 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1.vendor \
     android.hardware.radio@1.1 \
     android.hardware.radio.config@1.0 \
+    android.hardware.radio.config@1.0.vendor \
+    android.hardware.radio.config@1.2 \
+    android.hardware.radio.config@1.2.vendor \
     android.hardware.secure_element@1.0 \
+    android.hardware.secure_element@1.0.vendor \
     librmnetctl \
     libprotobuf-cpp-full \
     libxml2 \
